@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matching the snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h1>
+      Color Box Maker
+    </h1>
+    <form>
+      <div>
+        <label
+          for="width"
+        >
+          Width
+        </label>
+        <input
+          id="width"
+          max="500"
+          min="1"
+          name="width"
+          type="range"
+          value="250"
+        />
+        <span>
+          250 pixels
+        </span>
+      </div>
+      <div>
+        <label
+          for="height"
+        >
+          Height
+        </label>
+        <input
+          id="height"
+          max="500"
+          min="1"
+          name="height"
+          type="range"
+          value="250"
+        />
+        <span>
+          250 pixels
+        </span>
+      </div>
+      <div>
+        <label
+          for="backgroundColor"
+        >
+          Background Color
+        </label>
+        <input
+          id="backgroundColor"
+          name="backgroundColor"
+          placeholder="Background Color"
+          type="text"
+          value=""
+        />
+      </div>
+      <button>
+        Create a new box!
+      </button>
+    </form>
+    <div />
+  </div>
+</DocumentFragment>
+`;
