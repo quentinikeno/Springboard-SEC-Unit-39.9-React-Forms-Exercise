@@ -7,6 +7,9 @@ const BoxList = () => {
 	const addBox = (newBox) => {
 		setBoxes((boxes) => [...boxes, newBox]);
 	};
+	const removeBox = (id) => {
+		setBoxes((boxes) => boxes.filter((box) => box.id !== id));
+	};
 	return (
 		<div>
 			<h1>Color Box Maker</h1>
@@ -14,10 +17,12 @@ const BoxList = () => {
 			<div>
 				{boxes.map((box) => (
 					<Box
+						id={box.id}
 						key={box.id}
-						width={`${box.width}px`}
-						height={`${box.height}px`}
+						width={box.width}
+						height={box.height}
 						backgroundColor={box.backgroundColor}
+						removeBox={removeBox}
 					/>
 				))}
 			</div>
