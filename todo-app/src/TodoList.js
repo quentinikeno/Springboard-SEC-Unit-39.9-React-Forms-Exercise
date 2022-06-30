@@ -8,7 +8,7 @@ const TodoList = () => {
 		SetTodos((todos) => [...todos, newTodo]);
 	};
 	const removeTodo = (id) => {
-		SetTodos((todos) => todos.filter(todo.id !== id));
+		SetTodos((todos) => todos.filter((todo) => todo.id !== id));
 	};
 
 	const todoComponents = todos.map((todo) => (
