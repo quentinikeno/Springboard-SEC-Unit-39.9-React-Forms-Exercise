@@ -53,3 +53,17 @@ test("Adding a new Box", () => {
 	expect(boxList.getByLabelText("Height")).toHaveValue("250");
 	expect(boxList.getByLabelText("Background Color")).toHaveValue("");
 });
+
+test("Removing a Box", () => {
+	const boxList = render(<BoxList />);
+
+	// Add a new Box
+	addNewBox(boxList);
+
+	// Click delete button
+	const removeButton = boxList.getByText("X");
+	fireEvent.click(removeButton);
+
+	// No delete buttons for Boxes in the DOM
+	expect(removeButton).not.toBeInTheDocument();
+});
