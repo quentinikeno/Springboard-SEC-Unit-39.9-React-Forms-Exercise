@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const NewBoxForm = ({ addBox }) => {
 	const INITIAL_STATE = { width: "", height: "", backgroundColor: "" };
-	const [formData, setFormData] = INITIAL_STATE;
+	const [formData, setFormData] = useState(INITIAL_STATE);
 	const handleChange = (event) => {
 		const { name, value } = event.target;
 		setFormData((formData) => ({ ...formData, [name]: value }));
