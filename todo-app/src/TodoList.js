@@ -11,7 +11,7 @@ const TodoList = () => {
 		SetTodos((todos) => todos.filter(todo.id !== id));
 	};
 
-	const todoComponents = todos.map((todos) => (
+	const todoComponents = todos.map((todo) => (
 		<Todo
 			key={todo.id}
 			id={todo.id}
