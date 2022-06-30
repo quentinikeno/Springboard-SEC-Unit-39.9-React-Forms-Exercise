@@ -14,37 +14,43 @@ const NewBoxForm = ({ addBox }) => {
 	};
 	return (
 		<form onSubmit={handleSubmit}>
-			<label htmlFor="width">Width</label>
-			<input
-				id="width"
-				type="range"
-				name="width"
-				min="1"
-				max="500"
-				value={formData.width}
-				onChange={handleChange}
-			/>
-			<span>{formData.width} pixels</span>
-			<label htmlFor="height">Width</label>
-			<input
-				id="height"
-				type="range"
-				name="height"
-				min="1"
-				max="500"
-				value={formData.height}
-				onChange={handleChange}
-			/>
-			<span>{formData.height} pixels</span>
-			<label htmlFor="backgroundColor">Width</label>
-			<input
-				id="backgroundColor"
-				type="text"
-				name="backgroundColor"
-				placeholder="Background Color"
-				value={formData.backgroundColor}
-				onChange={handleChange}
-			/>
+			<div>
+				<label htmlFor="width">Width</label>
+				<input
+					id="width"
+					type="range"
+					name="width"
+					min="1"
+					max="500"
+					value={formData.width}
+					onChange={handleChange}
+				/>
+				<span>{formData.width} pixels</span>
+			</div>
+			<div>
+				<label htmlFor="height">Height</label>
+				<input
+					id="height"
+					type="range"
+					name="height"
+					min="1"
+					max="500"
+					value={formData.height}
+					onChange={handleChange}
+				/>
+				<span>{formData.height} pixels</span>
+			</div>
+			<div>
+				<label htmlFor="backgroundColor">Background Color</label>
+				<input
+					id="backgroundColor"
+					type="text"
+					name="backgroundColor"
+					placeholder="Background Color"
+					value={formData.backgroundColor}
+					onChange={handleChange}
+				/>
+			</div>
 		</form>
 	);
 };
