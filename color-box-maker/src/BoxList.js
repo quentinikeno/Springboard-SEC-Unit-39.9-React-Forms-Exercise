@@ -10,7 +10,11 @@ const BoxList = () => {
 		<div>
 			<h1>Color Box Maker</h1>
 			{boxes.map((box) => (
-				<Box width={box.width} height={box.height} color={box.color} />
+				<Box
+					width={box.width}
+					height={box.height}
+					backgroundColor={box.color}
+				/>
 			))}
 		</div>
 	);
