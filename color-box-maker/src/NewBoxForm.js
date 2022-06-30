@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
 
 const NewBoxForm = ({ addBox }) => {
-	const INITIAL_STATE = { width: "", height: "", backgroundColor: "" };
+	const INITIAL_STATE = { width: 250, height: 250, backgroundColor: "" };
 	const [formData, setFormData] = useState(INITIAL_STATE);
 	const handleChange = (event) => {
 		const { name, value } = event.target;
