@@ -12,6 +12,7 @@ const BoxList = () => {
 	return (
 		<div>
 			<h1>Color Box Maker</h1>
+			<NewBoxForm addBox={addBox} />
 			<div>
 				{boxes.map((box) => (
 					<Box
@@ -21,7 +22,6 @@ const BoxList = () => {
 					/>
 				))}
 			</div>
-			<NewBoxForm addBox={addBox} />
 		</div>
 	);
 };
