@@ -3,9 +3,9 @@ import Box from "./Box";
 import NewBoxForm from "./NewBoxForm";
 
 const BoxList = () => {
-	const [boxes, setBoxes] = [
+	const [boxes, setBoxes] = useState([
 		{ width: "100px", height: "100px", color: "green" },
-	];
+	]);
 	const addBox = (newBox) => {
 		setBoxes((boxes) => [...boxes, newBox]);
 	};
@@ -21,7 +21,7 @@ const BoxList = () => {
 					/>
 				))}
 			</div>
-			<newBoxForm addBox={addBox} />
+			<NewBoxForm addBox={addBox} />
 		</div>
 	);
 };
