@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Todo from "./Todo";
+import NewTodoForm from "./NewTodoForm";
 
 const TodoList = () => {
 	const [todos, SetTodos] = useState([]);
@@ -10,6 +11,7 @@ const TodoList = () => {
 	return (
 		<div className="TodoList">
 			<h1>Todo List</h1>
+			<NewTodoForm />
 			<div className="TodoList-todos-div">{todoComponents}</div>
 		</div>
 	);
