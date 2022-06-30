@@ -6,16 +6,22 @@ const BoxList = () => {
 	const [boxes, setBoxes] = [
 		{ width: "100px", height: "100px", color: "green" },
 	];
+	const addBox = (newBox) => {
+		setBoxes((boxes) => [...boxes, newBox]);
+	};
 	return (
 		<div>
 			<h1>Color Box Maker</h1>
-			{boxes.map((box) => (
-				<Box
-					width={box.width}
-					height={box.height}
-					backgroundColor={box.color}
-				/>
-			))}
+			<div>
+				{boxes.map((box) => (
+					<Box
+						width={box.width}
+						height={box.height}
+						backgroundColor={box.color}
+					/>
+				))}
+			</div>
+			<newBoxForm addBox={addBox} />
 		</div>
 	);
 };
