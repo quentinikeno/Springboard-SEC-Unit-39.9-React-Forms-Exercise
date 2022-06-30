@@ -52,6 +52,7 @@ const NewBoxForm = ({ addBox }) => {
 					onChange={handleChange}
 				/>
 			</div>
+			<button>Create a new box!</button>
 		</form>
 	);
 };
