@@ -7,9 +7,17 @@ const TodoList = () => {
 	const addTodo = (newTodo) => {
 		SetTodos((todos) => [...todos, newTodo]);
 	};
+	const removeTodo = (id) => {
+		SetTodos((todos) => todos.filter(todo.id !== id));
+	};
 
 	const todoComponents = todos.map((todos) => (
-		<Todo key={todo.id} id={todo.id} task={todo.task} />
+		<Todo
+			key={todo.id}
+			id={todo.id}
+			task={todo.task}
+			removeTodo={removeTodo}
+		/>
 	));
 	return (
 		<div className="TodoList">
