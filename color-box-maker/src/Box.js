@@ -1,7 +1,15 @@
 import React from "react";
 
-const Box = (props) => {
-	return <div style={props}></div>;
+const Box = ({ id, height, width, backgroundColor, removeBox }) => {
+	return (
+		<div
+			style={{
+				height: `${height}px`,
+				width: `${width}px`,
+				backgroundColor,
+			}}
+		></div>
+	);
 };
 
 export default Box;
