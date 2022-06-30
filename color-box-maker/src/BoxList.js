@@ -3,7 +3,7 @@ import Box from "./Box";
 import NewBoxForm from "./NewBoxForm";
 
 const BoxList = () => {
-	const [boxes, setBoxes] = useState();
+	const [boxes, setBoxes] = useState([]);
 	const addBox = (newBox) => {
 		setBoxes((boxes) => [...boxes, newBox]);
 	};
@@ -15,9 +15,9 @@ const BoxList = () => {
 				{boxes.map((box) => (
 					<Box
 						key={box.id}
-						width={box.width}
-						height={box.height}
-						backgroundColor={box.color}
+						width={`${box.width}px`}
+						height={`${box.height}px`}
+						backgroundColor={box.backgroundColor}
 					/>
 				))}
 			</div>
