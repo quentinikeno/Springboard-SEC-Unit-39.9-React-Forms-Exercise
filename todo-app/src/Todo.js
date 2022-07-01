@@ -1,5 +1,6 @@
 import { useState } from "react";
 import EditTodoForm from "./EditTodoForm";
+import "./Todo.css";
 
 const Todo = ({
 	id,
