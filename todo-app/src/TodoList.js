@@ -7,6 +7,13 @@ const TodoList = () => {
 	const addTodo = (newTodo) => {
 		SetTodos((todos) => [...todos, newTodo]);
 	};
+	const editTodo = (id, updatedTask) => {
+		SetTodos((todos) =>
+			todos.map((todo) =>
+				todo.id === id ? { ...todo, task: updatedTask } : todo
+			)
+		);
+	};
 	const removeTodo = (id) => {
 		SetTodos((todos) => todos.filter((todo) => todo.id !== id));
 	};
@@ -17,6 +24,7 @@ const TodoList = () => {
 			id={todo.id}
 			task={todo.task}
 			removeTodo={removeTodo}
+			editTodo={editTodo}
 		/>
 	));
 	return (
