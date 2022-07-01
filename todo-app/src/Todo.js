@@ -30,7 +30,13 @@ const Todo = ({
 				/>
 			) : (
 				<div>
-					<span>{task}</span>
+					<span
+						className={`Todo-task${
+							isCompleted ? "-completed" : ""
+						}`}
+					>
+						{task}
+					</span>
 					<button className="Todo-edit-btn" onClick={handleEditClick}>
 						Edit
 					</button>
