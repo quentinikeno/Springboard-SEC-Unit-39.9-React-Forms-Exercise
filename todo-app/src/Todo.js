@@ -1,13 +1,23 @@
 import { useState } from "react";
 import EditTodoForm from "./EditTodoForm";
 
-const Todo = ({ id, task, removeTodo, editTodo }) => {
+const Todo = ({
+	id,
+	task,
+	removeTodo,
+	editTodo,
+	isCompleted,
+	setIsCompletedTodo,
+}) => {
 	const [isEditing, setIsEditing] = useState(false);
 	const handleDeleteClick = () => {
 		removeTodo(id);
 	};
 	const handleEditClick = () => {
 		setIsEditing(true);
+	};
+	const handleCompletedClick = () => {
+		setIsCompletedTodo(!isCompleted);
 	};
 	return (
 		<div className="Todo">
@@ -28,7 +38,7 @@ const Todo = ({ id, task, removeTodo, editTodo }) => {
 						className="Todo-completed-btn"
 						onClick={handleCompletedClick}
 					>
-						Edit
+						Mark as completed
 					</button>
 					<button
 						className="Todo-delete-btn"
