@@ -21,6 +21,7 @@ const EditTodoForm = ({ id, task, editTodo, setIsEditing }) => {
 				placeholder="Todo"
 				name="task"
 				onChange={handleChange}
+				value={taskInput}
 			/>
 			<button>Update Todo!</button>
 		</form>
