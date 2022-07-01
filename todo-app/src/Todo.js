@@ -45,7 +45,9 @@ const Todo = ({
 						className="Todo-completed-btn"
 						onClick={handleCompletedClick}
 					>
-						Mark as completed
+						{isCompleted
+							? "Unmark as completed"
+							: "Mark as completed"}
 					</button>
 					<button
 						className="Todo-delete-btn"
