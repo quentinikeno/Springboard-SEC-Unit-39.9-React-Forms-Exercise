@@ -18,7 +18,7 @@ const Todo = ({
 		setIsEditing(true);
 	};
 	const handleCompletedClick = () => {
-		setIsCompletedTodo(!isCompleted);
+		setIsCompletedTodo(id, !isCompleted);
 	};
 	return (
 		<div className="Todo">

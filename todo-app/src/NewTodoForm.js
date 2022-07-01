@@ -9,7 +9,7 @@ const NewTodoForm = ({ addTodo }) => {
 	};
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		addTodo({ id: uuid(), task: taskInput });
+		addTodo({ id: uuid(), task: taskInput, isCompleted: false });
 		setTaskInput("");
 	};
 	return (
