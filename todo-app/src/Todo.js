@@ -10,7 +10,7 @@ const Todo = ({ id, task, removeTodo, editTodo }) => {
 		setIsEditing(true);
 	};
 	return (
-		<div>
+		<div className="Todo">
 			{isEditing ? (
 				<EditTodoForm
 					id={id}
@@ -24,12 +24,20 @@ const Todo = ({ id, task, removeTodo, editTodo }) => {
 					<button className="Todo-edit-btn" onClick={handleEditClick}>
 						Edit
 					</button>
+					<button
+						className="Todo-completed-btn"
+						onClick={handleCompletedClick}
+					>
+						Edit
+					</button>
+					<button
+						className="Todo-delete-btn"
+						onClick={handleDeleteClick}
+					>
+						X
+					</button>
 				</div>
 			)}
-
-			<button className="Todo-delete-btn" onClick={handleDeleteClick}>
-				X
-			</button>
 		</div>
 	);
 };
