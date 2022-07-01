@@ -30,6 +30,7 @@ const TodoList = () => {
 			key={todo.id}
 			id={todo.id}
 			task={todo.task}
+			isCompleted={todo.isCompleted}
 			removeTodo={removeTodo}
 			editTodo={editTodo}
 			setIsCompletedTodo={setIsCompletedTodo}
