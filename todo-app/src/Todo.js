@@ -1,10 +1,18 @@
-const Todo = ({ id, task, removeTodo }) => {
+import { useState } from "react";
+import EditTodoForm from "./EditTodoForm";
+
+const Todo = ({ id, task, removeTodo, editTodo }) => {
+	const [isEditing, setIsEditing] = useState(false);
 	const handleClick = () => {
 		removeTodo(id);
 	};
 	return (
 		<div>
-			{task}
+			{isEditing ? (
+				<EditTodoForm id={id} task={task} editTodo={editTodo} />
+			) : (
+				task
+			)}
 			<button className="Todo-delete-btn" onClick={handleClick}>
 				X
 			</button>
