@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const EditTodoForm = ({ id, task, editTodo }) => {
+const EditTodoForm = ({ id, task, editTodo, setIsEditing }) => {
 	const [taskInput, setTaskInput] = useState(task);
 	const handleChange = (event) => {
 		event.preventDefault();
@@ -9,6 +9,7 @@ const EditTodoForm = ({ id, task, editTodo }) => {
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		editTodo(id, taskInput);
+		setIsEditing(false);
 		setTaskInput("");
 	};
 	return (
