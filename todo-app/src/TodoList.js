@@ -14,6 +14,13 @@ const TodoList = () => {
 			)
 		);
 	};
+	const setIsCompletedTodo = (id, isCompleted) => {
+		SetTodos((todos) =>
+			todos.map((todo) =>
+				todo.id === id ? { ...todo, isCompleted } : todo
+			)
+		);
+	};
 	const removeTodo = (id) => {
 		SetTodos((todos) => todos.filter((todo) => todo.id !== id));
 	};
@@ -25,6 +32,7 @@ const TodoList = () => {
 			task={todo.task}
 			removeTodo={removeTodo}
 			editTodo={editTodo}
+			setIsCompletedTodo={setIsCompletedTodo}
 		/>
 	));
 	return (
