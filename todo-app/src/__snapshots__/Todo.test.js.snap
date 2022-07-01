@@ -2,13 +2,31 @@
 
 exports[`matches snapshot 1`] = `
 <DocumentFragment>
-  <div>
-    Feed cat.
-    <button
-      class="Todo-delete-btn"
-    >
-      X
-    </button>
+  <div
+    class="Todo"
+  >
+    <div>
+      <span
+        class="Todo-task"
+      >
+        Feed cat.
+      </span>
+      <button
+        class="Todo-edit-btn"
+      >
+        Edit
+      </button>
+      <button
+        class="Todo-completed-btn"
+      >
+        Mark as completed
+      </button>
+      <button
+        class="Todo-delete-btn"
+      >
+        X
+      </button>
+    </div>
   </div>
 </DocumentFragment>
 `;
